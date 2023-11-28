@@ -1,0 +1,211 @@
+:root {
+    --mainBackground: #103300;
+    --accentBackground: #4CFF00;
+    --textColor: #E7EC1E;
+    
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    font-family: 'Chakra Petch', sans-serif;
+    background: url(../images/background.png) #B9FFAD;
+}
+
+footer {
+    text-align: center;
+    background-color: var(--mainBackground);
+}
+
+main {
+    margin: 10%;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header {
+    background: #103300 url(../images/bottle4.png);
+    color: var(--textColor);
+}
+
+a:hover {
+    color: var(--textColor);
+    background-color: var(--mainBackground);
+}
+
+nav {
+    font-weight: bold;
+    margin-left: 35%;
+    margin-right: 35%;
+    background-color: var(--accentBackground);
+    text-align: center;
+    border-radius: 0 0 15px 15px;
+    display: grid;
+}
+
+div > nav {
+    grid-template-areas:
+    "home products links cu staff videos";
+    grid-template-rows: 1fr ;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr ;
+}
+
+
+footer > nav {
+    border-radius: 0;
+    grid-template-columns: 100px;
+    justify-content: center;
+    margin-left: 45%;
+    margin-right: 45%;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    margin: 2%;
+}
+
+div h2 {
+    background-color: var(--accentBackground);
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+h1 {
+    font-style: italic;
+}
+
+small {
+    color: var(--textColor);
+}
+small > a {
+    margin: 0;
+    color: var(--accentBackground);
+    margin-right: 10px;
+}
+
+.space {
+    margin-bottom: 5em;
+}
+
+p {
+    font-size: large;
+}
+
+@media (width <= 768px){
+    
+
+    a:hover{
+        color: black;
+        background-color: var(--accentBackground);
+    }
+
+    header > a{
+        border: 0;
+    }
+
+    h1 {
+        font-size: clamp(2.2em, 1vi + 1em, 1em);
+        text-align: center;
+    }
+    p {
+        inline-size: 70%;
+        font-size: clamp(1.5em, 1vi + 1em, 1em);
+        text-align: center;
+        margin: auto;
+    }
+
+    div {
+        overflow: hidden;
+    }
+
+    main {
+        width: auto;
+    }
+
+    nav > a:not(footer > nav > a):nth-last-of-type(1) {
+        display: none;
+    }
+
+    nav > a:not(footer > nav > a):nth-last-of-type(2) {
+        display: none;
+    }
+
+    nav:not(footer > nav) {
+        display: grid;
+        grid-template-areas:
+        "home products"
+        "links contact";
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    nav:not(footer > nav) {
+        margin: auto;
+    }
+
+    a:not(footer > nav > a):not(footer > a):not(small > a) {
+        border: black solid .5vi;
+        padding: 2vi;
+    }
+
+    footer > nav {
+        display: grid;
+        grid-template-areas: 
+        "h p l"
+        "cu s v";
+
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 2vi;
+        background-color: #4CFF00;
+        margin: auto;
+        height: auto;
+    }
+
+    footer > nav > a:not(footer > a) {
+        border: black solid .5vi;
+        margin: 2vi;
+        padding: 2vi;
+    }
+
+    footer > nav > a:nth-of-type(1)
+    {
+        grid-area: h;
+    }
+
+    footer > nav > a:nth-of-type(2)
+    {
+        grid-area: p;
+    }
+
+    footer > nav > a:nth-of-type(3)
+    {
+        grid-area: l;
+    }
+
+    footer > nav > a:nth-of-type(4)
+    {
+        grid-area: cu;
+    }
+
+    footer > nav > a:nth-of-type(5)
+    {
+        grid-area: s;
+    }
+
+    footer > nav > a:nth-of-type(6)
+    {
+        grid-area: v;
+    }
+
+    img {
+        max-inline-size: 100%;
+    }
+}

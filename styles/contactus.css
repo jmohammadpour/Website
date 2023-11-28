@@ -1,0 +1,35 @@
+fieldset {
+    display: grid;
+
+}
+
+input, label {
+    margin: auto;
+}
+
+legend {
+    text-align: center;
+}
+
+div {
+    display: grid;
+}
+
+[type="submit"], [type="reset"] {
+    background-color: #103300;
+    color: #E7EC1E;
+}
+
+[type="submit"]:hover, [type="reset"]:hover {
+    background-color: #4CFF00;
+    color: #103300;
+}
+
+h1, p {
+    text-align: center;
+}
+
+p {
+    margin-bottom: 10%;
+}
+
